@@ -1,0 +1,5 @@
+mach create
+machine LoadPlatformDescription @platforms/cpus/nrf52840.repl
+sysbus LoadELF @rtos.elf
+showAnalyzer sysbus.uart0
+start
