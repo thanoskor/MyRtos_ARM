@@ -14,7 +14,10 @@ set(CMAKE_EXE_LINKER_FLAGS "${MCPU_FLAGS} -nostdlib")
 add_executable(rtos.elf
     startup.c
     main.c
-    uart.c
+    basic_drivers/uart.c
+    basic_drivers/hfclk.c
+    basic_drivers/lfclk.c
+    basic_drivers/rtc_tick.c
 )
 
 target_link_libraries(rtos.elf gcc)
